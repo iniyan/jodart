@@ -9,22 +9,26 @@
     --accent-blue: #4A7FDB;
     --accent-coral: #FF6B6B;
     --accent-coral-dark: #E85555;
-    --gold: #FFB84D;
-    --gold-light: #FFD699;
+
+    /* Replacing Gold with Cyan/Teal Accents */
+    --accent-cyan: #00D9FF;
+    --accent-cyan-light: #5CE1FF;
+    --accent-teal: #00B8D4;
+
     --snow: #F7FAFB;
     --muted-gray: #6B7280;
     --dark-bg: #0A1628;
     --card-bg: rgba(247, 250, 251, 0.05);
 
-    /* Background Colors */
+    /* Background Colors - Updated */
     --bg-primary: #0A1628;
     --bg-secondary: #0F2340;
     --bg-tertiary: #1A3A5C;
     --section-bg-light: rgba(130, 171, 244, 0.1);
     --section-bg-medium: rgba(130, 171, 244, 0.15);
     --section-bg-dark: rgba(130, 171, 244, 0.2);
-    --nav-bg: rgba(10, 22, 40, 0.9);
-    --footer-bg: rgba(10, 22, 40, 0.9);
+    --nav-bg: rgba(10, 22, 40, 0.95);
+    --footer-bg: rgba(10, 22, 40, 0.95);
 
     /* Legacy variable mappings for compatibility */
     --pine-900: #0F2340;
@@ -32,6 +36,10 @@
     --pine-700: #2A4A6C;
     --santa-red: #FF6B6B;
     --santa-red-dark: #E85555;
+
+    /* Map gold to cyan for backward compatibility */
+    --gold: #00D9FF;
+    --gold-light: #5CE1FF;
 
     /* Typography */
     --font-serif: 'Playfair Display', serif;
@@ -47,7 +55,7 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
-    --shadow-glow: 0 0 20px rgba(130, 171, 244, 0.4);
+    --shadow-glow: 0 0 20px rgba(0, 217, 255, 0.4);
 
     /* Transitions */
     --transition-fast: 200ms ease;
@@ -956,48 +964,16 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 1.5rem;
-    max-width: 1600px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
     margin: 0 auto;
-}
-
-/* Bento Layout - Asymmetric Grid */
-.service-card:nth-child(1) {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-}
-
-.service-card:nth-child(2) {
-    grid-column: 3 / 5;
-    grid-row: 1 / 2;
-}
-
-.service-card:nth-child(3) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-
-.service-card:nth-child(4) {
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
-}
-
-.service-card:nth-child(5) {
-    grid-column: 4 / 5;
-    grid-row: 2 / 3;
-}
-
-.service-card:nth-child(6) {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
 }
 
 .service-card {
     padding: 2.5rem 2rem;
     text-align: left;
-    min-height: 280px;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
 }
@@ -1531,23 +1507,12 @@ body {
 
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-    }
-
-    /* Reset bento layout for mobile */
-    .service-card:nth-child(1),
-    .service-card:nth-child(2),
-    .service-card:nth-child(3),
-    .service-card:nth-child(4),
-    .service-card:nth-child(5),
-    .service-card:nth-child(6) {
-        grid-column: auto;
-        grid-row: auto;
     }
 
     .about-strengths {
         grid-template-columns: 1fr;
     }
+
 
     .christmas-tree {
         border-left-width: 25px;
